@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: node-app-deployment
   labels:
-     app: node-app
-  spec:
-     replicas: 1
-     selector:
-         matchLabels:
-         app: node-app
-     template:
-         metadata:
-             labels:
-             app: node-app
-     spec:
-         containers:
-         - name: node-app
-         image: adharshkh/node-app:appv1
-         ports:
-         - containerPort: 3000
+    app: node-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-app
+  template:
+    metadata:
+      labels:
+        app: node-app 
+    spec:
+      containers:
+      - name: node-app
+        image: adharshkh/node-app:appv1
+        ports:
+        - containerPort: 8080
